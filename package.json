@@ -1,0 +1,17 @@
+{
+  "name": "growify",
+  "version": "1.0.0",
+  "description": "growify simulation app",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "yarn --cwd client install && yarn --cwd client build",
+    "deploy": "cp -a client/build/. public/",
+    "heroku-postbuild": "yarn build && yarn deploy"
+  },
+  "author": "",
+  "license": "ISC"
+}
